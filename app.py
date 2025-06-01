@@ -14,7 +14,7 @@ lambda_client = boto3.client(
 @app.route('/trigger')
 def trigger_lambda():
     response = lambda_client.invoke(
-        FunctionName='arn:aws:lambda:us-west-2:975050024946:function:FraudDetectionProjectB11G12',
+        FunctionName='your-lambda-function-arn',
         InvocationType='RequestResponse',
         Payload=b'{}'
     )
